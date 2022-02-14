@@ -639,3 +639,15 @@ class prepare_transcriptomics_file_for_SPARCE:
         return df_binned
 
 #--------------------------------#
+def main(cla_args=sys.argv[1:]):
+   #--------------------------------#
+   args = fs.args_parse(parse_cla(cla_args))
+   X = args['x']
+   y = args['y']
+   nFeatures = args['f']
+   nJobs = args['j']
+   
+   #--------------------------------#
+
+if __name__ == '__main__':
+    main()
