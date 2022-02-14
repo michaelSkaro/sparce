@@ -19,7 +19,7 @@ setuptools.setup(
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
     ],
-    package_dir={'src/'},
+    package_dir={'fs':'src/'},
     packages=setuptools.find_packages(where="src"),
     python_requires=">=3.6",
     install_requires=['os','re','sys','math','seaborn','glob','io','collections','maplotlib','numpy','pandas','scikit-learn']
