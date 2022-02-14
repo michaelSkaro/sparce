@@ -52,4 +52,4 @@ CV = fs.grade_features(X = X, y = y, nFeatures = nFeatures , nJobs = nJobs)
   - nFeatures = Top n features toreturn for the selection algorithms. The objetive of this parameter is to limit the recursive feature selection from running indefinitely. 
   - nJobs = compute resources to dedicate to the job at hand. RFE is slow, be prepared to get a cup of coffee. This can be shut off if the user wishes. 
 
-### Help python3 feature_selection.py --help 
+### Help python3 sparce.py --help 
