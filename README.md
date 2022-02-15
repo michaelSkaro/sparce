@@ -3,13 +3,13 @@ A software resource to split a genomics, methylomics or trasncriptomics file int
 
 
 ## Feature selection for ML workflows
-This python package will automate feature selection in ML projects in the Arnold lab. The method was used as a feature selection method in my first chapter but seems to service the lab. I will keep this package updated for the projects in the coming months and as a vehicle for developing my introduction to my thesis, a review of feature selection methods in ML and which ones I used for the feature seleciton methods in CH1. 
+This python package will automate feature selection in ML projects in the Arnold lab. The method was used as a feature selection method in my first chapter but seems to service the lab. I will keep this package updated for the projects in the coming months and as a vehicle for developing my introduction to my thesis, a review of feature selection methods in ML and which ones I used for the feature selection methods in CH1. 
 
 In the coming weeks I will add a plethora of information describing the use of the package and the algorithms that are working under the hood.
 
 For now we will settle for a simple Read me to get us started on 0.0.1. 
 
-As a general description this package is intended for the use of novice users looking for general feature seleciton in an automated fashion. This will not replace your own featue analysis but can help users make a good first step eliminating redundant features and begin looking for strong signals in their feature columns. 
+As a general description this package is intended for the use of novice users looking for general feature selection in an automated fashion. This will not replace your own featue analysis but can help users make a good first step eliminating redundant features and begin looking for strong signals in their feature columns. 
 
 ### Installation
 
