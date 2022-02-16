@@ -20,6 +20,7 @@ from sklearn.linear_model import LogisticRegression
 #from sparce import fs.args_parse
 
 class feature_selection:
+
    def __init__(self, X, y, nFeatures,nJobs):
        self.X = X
        self.y = y
@@ -30,9 +31,16 @@ class feature_selection:
    
    def chiSQ_selector(X, y, nFeatures):
        '''
-       input: X, y, nFeatures
-       output: chiSQ_support, feature_list
-
+       :param X: continuous data
+       :type X: pandas dataframe
+       :param y: class data
+       :type y: encoded class data
+       
+       :return: support
+       :rtype: list boolean
+       :return: feature_list 
+       :rtype: list string
+       
        Objective: Use the chi-squared test to select features.
        Reference: https://scikit-learn.org/stable/modules/generated/sklearn.feature_selection.chi2.html
 
@@ -48,8 +56,17 @@ class feature_selection:
    
    def rfR(X, y, nFeatures,nJobs):
        '''
-       input: X, y, nFeatures, nJobs
-       output: rfR_support
+       
+       :param X: continuous data
+       :type X: pandas dataframe
+       :param y: class data
+       :type y: encoded class data
+       
+       :return: support
+       :rtype: list boolean
+       :return: feature_list 
+       :rtype: list string
+       
 
        Objective: Use the RandomForestRegressor to select features.
        Reference: https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestRegressor.html
@@ -69,8 +86,15 @@ class feature_selection:
    
    def recursiveFeatureSelection(X, y, nFeatures,nJobs):
        '''
-       input: X, y, nFeatures, nJobs
-       output: rfe_support
+       :param X: continuous data
+       :type X: pandas dataframe
+       :param y: class data
+       :type y: encoded class data
+       
+       :return: support
+       :rtype: list boolean
+       :return: feature_list 
+       :rtype: list string
 
        Objective: Use the Recursive Feature Elimination to select features.
        Reference: https://scikit-learn.org/stable/modules/generated/sklearn.feature_selection.RFE.html
@@ -94,8 +118,15 @@ class feature_selection:
    
    def lassoR(X, y, nFeatures,nJobs):
        '''
-       input: X, y, nFeatures, nJobs
-       output: lassoR_support
+       :param X: continuous data
+       :type X: pandas dataframe
+       :param y: class data
+       :type y: encoded class data
+       
+       :return: support
+       :rtype: list boolean
+       :return: feature_list 
+       :rtype: list string
 
        Objective: Use the Lasso Regression to select features.
        Reference: https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.Lasso.html
@@ -116,8 +147,15 @@ class feature_selection:
    
    def rfC(X, y, nFeatures,nJobs):
        '''
-       input: X, y, nFeatures, nJobs
-       output: rfC_support
+       :param X: continuous data
+       :type X: pandas dataframe
+       :param y: class data
+       :type y: encoded class data
+       
+       :return: support
+       :rtype: list boolean
+       :return: feature_list 
+       :rtype: list string
 
        Objective: Use the RandomForestClassifier to select features.
        Reference: https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html
@@ -138,8 +176,21 @@ class feature_selection:
    
    def cross_validate_feature_selection(feature_list, chiSQ_support, rfe_support, lR_support, rfC_support,rfR_support):
         '''
-        input: feature_list, chiSQ_support, rfe_support, lR_support, rfC_support,rfR_support
-        output: df
+        :param feature_list: list of features
+        :type feature_list: list string
+        :param chiSQ_support: support
+        :type chiSQ_support: list boolean
+        :param rfe_support: support
+        :type rfe_support: list boolean
+        :param lR_support: support
+        :type lR_support: list boolean
+        :param rfC_support: support
+        :type rfC_support: list boolean
+        :param rfR_support: support
+        :type rfR_support: list boolean
+        
+        :return: dataframe quantifying the performance of each feature selection method
+        :rtype: dataframe
 
         Objective: Use the cross validation to select features.
         Reference: https://towardsdatascience.com/feature-selection-techniques-in-machine-learning-with-python-f24e7da3f36e
@@ -163,8 +214,14 @@ class feature_selection:
 
    def grade_features(X, y, nFeatures, n_jobs):
        '''
-       input: X, y, nFeatures, n_jobs
-       output: CV
+       :param X: continuous data
+         :type X: pandas dataframe
+       :param y: class data
+         :type y: encoded class data
+       :param nFeatures: number of features to select
+         :type nFeatures: int
+        :param n_jobs: number of jobs to run in parallel
+         :type n_jobs: int
 
        Objective: Call each function in the feature selection class, grade each set of features with each of the algorithms.
        Sum the total boolen supports for each feature and then sort the features by the sum.
@@ -198,8 +255,10 @@ class parseVariantAnnotationFile:
     def parse_bedfile(variantAnnotationFile):
 
         '''
-        input: bedfile
-        output: dataframe
+        :param variantAnnotationFile: variant annotation file
+        :type variantAnnotationFile: string
+        :return: variant annotation file
+        :rtype: pandas dataframe
 
         format: chr start end name score strand
 
@@ -224,8 +283,10 @@ class parseVariantAnnotationFile:
 
     def count_variants_in_bins(df):
         '''
-        input: annotated bedfile
-        output: dataframe
+        :param df: variant annotation file
+        :type df: pandas dataframe
+        :return: variant annotation file
+        :rtype: pandas dataframe
 
         format: chr start end name score strand
 
@@ -240,8 +301,10 @@ class parseVariantAnnotationFile:
         
     def count_variants_in_bins_per_chromosome(df):
         '''
-        input: annotated bedfile
-        output: dataframe
+        :param df: variant annotation file
+        :type df: pandas dataframe
+        :return: variant annotation file
+        :rtype: pandas dataframe
 
         format: chr start end name score strand
 
@@ -262,8 +325,10 @@ class parseVariantAnnotationFile:
 
     def count_variants_in_bins_per_chromosome_per_strand(df):
         '''
-        input: annotated bedfile
-        output: dataframe
+        :param df: variant annotation file
+        :type df: pandas dataframe
+        :return: variant annotation file
+        :rtype: pandas dataframe
 
         format: chr start end name score strand
 
@@ -282,9 +347,11 @@ class parseVariantAnnotationFile:
     
     def count_variants_in_bins_per_chromosome_per_strand_per_score(df):
         '''
-        input: annotated bedfile
-        output: dataframe
-
+        :param df: variant annotation file
+        :type df: pandas dataframe
+        :return: variant annotation file
+        :rtype: pandas dataframe
+        
         format: chr start end name score strand
 
         Objective: count the number of variants in each bin.
@@ -304,8 +371,10 @@ class parseVariantAnnotationFile:
     
     def count_variants_in_bins_per_chromosome_per_strand_per_score_per_name(df):
         '''
-        input: annotated bedfile
-        output: dataframe
+        :param df: variant annotation file
+        :type df: pandas dataframe
+        :return: variant annotation file
+        :rtype: pandas dataframe
 
         format: chr start end name score strand
 
@@ -329,9 +398,11 @@ class parseVariantAnnotationFile:
     
     def count_variants_in_bins_per_chromosome_per_strand_per_score_per_name_per_start(df):
         '''
-        input: annotated bedfile
-        output: dataframe
-
+        :param df: variant annotation file
+        :type df: pandas dataframe
+        :return: variant annotation file
+        :rtype: pandas dataframe
+        
         format: chr start end name score strand
 
         Objective: count the number of variants in each bin.
@@ -354,8 +425,10 @@ class parseVariantAnnotationFile:
     
     def count_variants_in_bins_per_chromosome_per_strand_per_score_per_name_per_start_per_end(df):
         '''
-        input: annotated bedfile
-        output: dataframe
+        :param df: variant annotation file
+        :type df: pandas dataframe
+        :return: variant annotation file
+        :rtype: pandas dataframe
 
         format: chr start end name score strand
 
@@ -381,8 +454,12 @@ class parseVariantAnnotationFile:
     
     def plot_variant_density_in_bins_per_chromosome(df):
         '''
-        input: annotated bed file
-        ouput: visualized plot
+        :param df: variant annotation file
+        :type df: pandas dataframe
+        :return: variant annotation file
+        :rtype: pandas dataframe
+        :plot: variant density in bins per chromosome
+
 
         Objective: Sum the variants in the each sliding window and vsiaulize the density of the variants in each of the bins.
 
@@ -407,6 +484,13 @@ class parseVariantAnnotationFile:
 
     def associate_variants_with_genes(genomeAnnotationFile, annotatedBedFile):
         '''
+        :param genomeAnnotationFile: genome annotation file
+        :type genomeAnnotationFile: string
+        :param annotatedBedFile: annotated bed file
+        :type annotatedBedFile: string
+        :return: variant annotation file
+        :rtype: pandas dataframe
+    
         input: genomeAnnotationFile and annotatedBedFile
         Output: dataframe
 
@@ -450,8 +534,10 @@ class parseVariantAnnotationFile:
     
     def parse_vcf(variantAnnotationFile):
         '''
-        input: vcf file
-        output: dataframe
+        :param variantAnnotationFile: variant annotation file
+        :type variantAnnotationFile: string
+        :return: variant annotation file
+        :rtype: pandas dataframe
 
         format: chr start end name score strand
 
@@ -477,10 +563,12 @@ class parse_gene_annotation:
         pass
 
     def parse_gfffile(geneAnnotationFile):
-
         '''
-        input: gfffile
-        output: dataframe
+        :param geneAnnotationFile: gene annotation file
+        :type geneAnnotationFile: string
+        :return: gene annotation file
+        :rtype: pandas dataframe
+
 
         format: chr start end name score strand
         Objective: parse organism gff file into pandas dataframe
@@ -505,8 +593,13 @@ class parse_gene_annotation:
 
     def bin_genome(df, binSize):
         '''
-        input: parsed gff file
-        output: dataframe
+        :param df: gene annotation file
+        :type df: pandas dataframe
+        :param binSize: bin size
+        :type binSize: int
+        :return: gene annotation file
+        :rtype: pandas dataframe
+        
 
         format: chr start end name score strand
 
@@ -531,8 +624,11 @@ class prepare_transcriptomics_file_for_SPARCE:
     
     def _parse_transcriptomics_file(transcriptomics_file):
         '''
-        input: transcriptomics_file
-        output: parsed_transcriptomics_file
+        :param transcriptomics_file: transcriptomics file
+        :type transcriptomics_file: string
+        :return: transcriptomics file
+        :rtype: pandas dataframe
+        
 
         Objective: parse the transcriptomics file into pandas dataframe
         '''
@@ -561,8 +657,11 @@ class prepare_transcriptomics_file_for_SPARCE:
     
     def _split(df):
         '''
-        input: parsed transcriptomics file
-        output: X, y
+        :param df: transcriptomics file
+        :type df: pandas dataframe
+        :return: transcriptomics file
+        :rtype: pandas dataframe
+
 
         Objective: split the transcriptomics file into two dataframes, one for the transcript expression and one for the target classes
 
@@ -577,8 +676,12 @@ class prepare_transcriptomics_file_for_SPARCE:
     
     def _balance_data_in_classes(X, y):
         '''
-        input: X, y
-        output: X_balanced, y_balanced
+        :param X: transcriptomics file
+        :type X: pandas dataframe
+        :param y: target classes
+        :type y: pandas dataframe
+        :return: balanced transcriptomics file
+        :rtype: pandas dataframe
 
         Objective: balance the data in the classes using the sklearn oversample and SMOTE methods
         
@@ -596,8 +699,12 @@ class prepare_transcriptomics_file_for_SPARCE:
 
     def _chunkIt(seq, num):
         """
-        input: seq, num
-        output: list of tuples for bin start and end points
+        :param seq: total length of sequence
+        :type seq: int
+        :param num: number of chunks
+        :type num: int
+        :return: tuples of sequence bins
+        :rtype: list of tuples
 
         Objective: chunk the data into bins of size num
 
@@ -611,8 +718,20 @@ class prepare_transcriptomics_file_for_SPARCE:
             last += avg
 
         return out
+    
     def _bin_transcript_features_based_on_gene_annotation(df, gff_df, binSize):
         '''
+        :param df: transcriptomics file
+        :type df: pandas dataframe
+        :param gff_df: gene annotation file
+        :type gff_df: pandas dataframe
+        :param binSize: bin size
+        :type binSize: int
+        :return: binned transcriptomics file
+        :rtype: pandas dataframe
+
+
+
         input: df, gff_df, binSize
         output: df_binned
 
