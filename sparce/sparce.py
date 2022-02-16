@@ -61,6 +61,11 @@ class feature_selection:
        :type X: pandas dataframe
        :param y: class data
        :type y: encoded class data
+       :param nFeatures: number of features to select
+       :type nFeatures: int
+       :param nJobs: number of jobs to run in parallel
+       :type nJobs: int
+
        
        :return: support
        :rtype: list boolean
@@ -90,6 +95,10 @@ class feature_selection:
        :type X: pandas dataframe
        :param y: class data
        :type y: encoded class data
+       :param nFeatures: number of features to select
+       :type nFeatures: int
+       :param nJobs: number of jobs to run in parallel
+       :type nJobs: int
        
        :return: support
        :rtype: list boolean
@@ -122,6 +131,10 @@ class feature_selection:
        :type X: pandas dataframe
        :param y: class data
        :type y: encoded class data
+       :param nFeatures: number of features to select
+       :type nFeatures: int
+       :param nJobs: number of jobs to run in parallel
+       :type nJobs: int
        
        :return: support
        :rtype: list boolean
@@ -151,6 +164,10 @@ class feature_selection:
        :type X: pandas dataframe
        :param y: class data
        :type y: encoded class data
+       :param nFeatures: number of features to select
+       :type nFeatures: int
+       :param nJobs: number of jobs to run in parallel
+       :type nJobs: int
        
        :return: support
        :rtype: list boolean
@@ -219,9 +236,9 @@ class feature_selection:
        :param y: class data
          :type y: encoded class data
        :param nFeatures: number of features to select
-         :type nFeatures: int
-        :param n_jobs: number of jobs to run in parallel
-         :type n_jobs: int
+       :type nFeatures: int
+       :param nJobs: number of jobs to run in parallel
+       :type nJobs: int
 
        Objective: Call each function in the feature selection class, grade each set of features with each of the algorithms.
        Sum the total boolen supports for each feature and then sort the features by the sum.

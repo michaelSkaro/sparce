@@ -9,7 +9,8 @@ setuptools.setup(
     author="Michael Skaro",
     author_email="mskaro.ms@gmail.com",
     description="A python package for automated feature selection",
-    long_description_content_type="text/markdown",
+    long_description=long_description,
+    long_description_content_type='text/markdown',
     url="https://github.com/michaelSkaro/sparce/",
     project_urls={
         "Bug Tracker": "https://github.com/michaelSkaro/sparce/issues",
@@ -19,8 +20,7 @@ setuptools.setup(
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
     ],
-    #package_dir={'fs':'src/'},
-    packages=setuptools.find_packages(),
+    packages=setuptools.find_packages(exclude=("images*")),
     python_requires=">=3.6",
     install_requires=['seaborn','matplotlib','numpy','pandas','scikit-learn']
 )
