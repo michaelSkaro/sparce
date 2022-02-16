@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>sparce package &mdash; sparce  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> sparce
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">sparce package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#sparce-ars-parse-module">sparce.ars_parse module</a></li>
+<li><a class="reference internal" href="#sparce-sparce-module">sparce.sparce module</a></li>
+<li><a class="reference internal" href="#module-sparce">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">sparce</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>sparce package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/sparce.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="sparce-package">
+<h1>sparce package<a class="headerlink" href="#sparce-package" title="Permalink to this headline"></a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline"></a></h2>
+</section>
+<section id="sparce-ars-parse-module">
+<h2>sparce.ars_parse module<a class="headerlink" href="#sparce-ars-parse-module" title="Permalink to this headline"></a></h2>
+</section>
+<section id="sparce-sparce-module">
+<h2>sparce.sparce module<a class="headerlink" href="#sparce-sparce-module" title="Permalink to this headline"></a></h2>
+</section>
+<section id="module-sparce">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-sparce" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="sparce.feature_selection">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sparce.</span></span><span class="sig-name descname"><span class="pre">feature_selection</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nFeatures</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nJobs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sparce.feature_selection" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="sparce.feature_selection.chiSQ_selector">
+<span class="sig-name descname"><span class="pre">chiSQ_selector</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nFeatures</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sparce.feature_selection.chiSQ_selector" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>X</strong> (<em>pandas dataframe</em>) – continuous data</p></li>
+<li><p><strong>y</strong> (<em>encoded class data</em>) – class data</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>support</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list boolean</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>feature_list</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list string</p>
+</dd>
+</dl>
+<p>Objective: Use the chi-squared test to select features.
+Reference: <a class="reference external" href="https://scikit-learn.org/stable/modules/generated/sklearn.feature_selection.chi2.html">https://scikit-learn.org/stable/modules/generated/sklearn.feature_selection.chi2.html</a></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sparce.feature_selection.cross_validate_feature_selection">
+<span class="sig-name descname"><span class="pre">cross_validate_feature_selection</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">chiSQ_support</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rfe_support</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lR_support</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rfC_support</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rfR_support</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sparce.feature_selection.cross_validate_feature_selection" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>feature_list</strong> (<em>list string</em>) – list of features</p></li>
+<li><p><strong>chiSQ_support</strong> (<em>list boolean</em>) – support</p></li>
+<li><p><strong>rfe_support</strong> (<em>list boolean</em>) – support</p></li>
+<li><p><strong>lR_support</strong> (<em>list boolean</em>) – support</p></li>
+<li><p><strong>rfC_support</strong> (<em>list boolean</em>) – support</p></li>
+<li><p><strong>rfR_support</strong> (<em>list boolean</em>) – support</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>dataframe quantifying the performance of each feature selection method</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dataframe</p>
+</dd>
+</dl>
+<p>Objective: Use the cross validation to select features.
+Reference: <a class="reference external" href="https://towardsdatascience.com/feature-selection-techniques-in-machine-learning-with-python-f24e7da3f36e">https://towardsdatascience.com/feature-selection-techniques-in-machine-learning-with-python-f24e7da3f36e</a></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sparce.feature_selection.grade_features">
+<span class="sig-name descname"><span class="pre">grade_features</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nFeatures</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_jobs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sparce.feature_selection.grade_features" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>X</strong> – continuous data
+:type X: pandas dataframe</p></li>
+<li><p><strong>y</strong> – class data
+:type y: encoded class data</p></li>
+<li><p><strong>nFeatures</strong> (<em>int</em>) – number of features to select</p></li>
+<li><p><strong>nJobs</strong> (<em>int</em>) – number of jobs to run in parallel</p></li>
+</ul>
+</dd>
+</dl>
+<p>Objective: Call each function in the feature selection class, grade each set of features with each of the algorithms.
+Sum the total boolen supports for each feature and then sort the features by the sum.</p>
+<p>Reference: <a class="reference external" href="https://towardsdatascience.com/feature-selection-techniques-in-machine-learning-with-python-f24e7da3f36e">https://towardsdatascience.com/feature-selection-techniques-in-machine-learning-with-python-f24e7da3f36e</a></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sparce.feature_selection.lassoR">
+<span class="sig-name descname"><span class="pre">lassoR</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nFeatures</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nJobs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sparce.feature_selection.lassoR" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>X</strong> (<em>pandas dataframe</em>) – continuous data</p></li>
+<li><p><strong>y</strong> (<em>encoded class data</em>) – class data</p></li>
+<li><p><strong>nFeatures</strong> (<em>int</em>) – number of features to select</p></li>
+<li><p><strong>nJobs</strong> (<em>int</em>) – number of jobs to run in parallel</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>support</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list boolean</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>feature_list</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list string</p>
+</dd>
+</dl>
+<p>Objective: Use the Lasso Regression to select features.
+Reference: <a class="reference external" href="https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.Lasso.html">https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.Lasso.html</a></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sparce.feature_selection.recursiveFeatureSelection">
+<span class="sig-name descname"><span class="pre">recursiveFeatureSelection</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nFeatures</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nJobs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sparce.feature_selection.recursiveFeatureSelection" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>X</strong> (<em>pandas dataframe</em>) – continuous data</p></li>
+<li><p><strong>y</strong> (<em>encoded class data</em>) – class data</p></li>
+<li><p><strong>nFeatures</strong> (<em>int</em>) – number of features to select</p></li>
+<li><p><strong>nJobs</strong> (<em>int</em>) – number of jobs to run in parallel</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>support</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list boolean</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>feature_list</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list string</p>
+</dd>
+</dl>
+<p>Objective: Use the Recursive Feature Elimination to select features.
+Reference: <a class="reference external" href="https://scikit-learn.org/stable/modules/generated/sklearn.feature_selection.RFE.html">https://scikit-learn.org/stable/modules/generated/sklearn.feature_selection.RFE.html</a></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sparce.feature_selection.rfC">
+<span class="sig-name descname"><span class="pre">rfC</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nFeatures</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nJobs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sparce.feature_selection.rfC" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>X</strong> (<em>pandas dataframe</em>) – continuous data</p></li>
+<li><p><strong>y</strong> (<em>encoded class data</em>) – class data</p></li>
+<li><p><strong>nFeatures</strong> (<em>int</em>) – number of features to select</p></li>
+<li><p><strong>nJobs</strong> (<em>int</em>) – number of jobs to run in parallel</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>support</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list boolean</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>feature_list</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list string</p>
+</dd>
+</dl>
+<p>Objective: Use the RandomForestClassifier to select features.
+Reference: <a class="reference external" href="https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html">https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html</a></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sparce.feature_selection.rfR">
+<span class="sig-name descname"><span class="pre">rfR</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nFeatures</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nJobs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sparce.feature_selection.rfR" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>X</strong> (<em>pandas dataframe</em>) – continuous data</p></li>
+<li><p><strong>y</strong> (<em>encoded class data</em>) – class data</p></li>
+<li><p><strong>nFeatures</strong> (<em>int</em>) – number of features to select</p></li>
+<li><p><strong>nJobs</strong> (<em>int</em>) – number of jobs to run in parallel</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>support</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list boolean</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>feature_list</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list string</p>
+</dd>
+</dl>
+<p>Objective: Use the RandomForestRegressor to select features.
+Reference: <a class="reference external" href="https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestRegressor.html">https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestRegressor.html</a></p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="sparce.parseVariantAnnotationFile">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sparce.</span></span><span class="sig-name descname"><span class="pre">parseVariantAnnotationFile</span></span><a class="headerlink" href="#sparce.parseVariantAnnotationFile" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="sparce.parseVariantAnnotationFile.associate_variants_with_genes">
+<span class="sig-name descname"><span class="pre">associate_variants_with_genes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">annotatedBedFile</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sparce.parseVariantAnnotationFile.associate_variants_with_genes" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>genomeAnnotationFile</strong> (<em>string</em>) – genome annotation file</p></li>
+<li><p><strong>annotatedBedFile</strong> (<em>string</em>) – annotated bed file</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>variant annotation file</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>pandas dataframe</p>
+</dd>
+</dl>
+<p>input: genomeAnnotationFile and annotatedBedFile
+Output: dataframe</p>
+<p>Objective: for each variant in the annotatedBedFile find any gene within 100kb of the variant using the genomeAnnotaitonFile</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sparce.parseVariantAnnotationFile.count_variants_in_bins">
+<span class="sig-name descname"><span class="pre">count_variants_in_bins</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sparce.parseVariantAnnotationFile.count_variants_in_bins" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>df</strong> (<em>pandas dataframe</em>) – variant annotation file</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>variant annotation file</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>pandas dataframe</p>
+</dd>
+</dl>
+<p>format: chr start end name score strand</p>
+<p>Objective: count the number of variants in each bin.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sparce.parseVariantAnnotationFile.count_variants_in_bins_per_chromosome">
+<span class="sig-name descname"><span class="pre">count_variants_in_bins_per_chromosome</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sparce.parseVariantAnnotationFile.count_variants_in_bins_per_chromosome" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>df</strong> (<em>pandas dataframe</em>) – variant annotation file</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>variant annotation file</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>pandas dataframe</p>
+</dd>
+</dl>
+<p>format: chr start end name score strand</p>
+<p>Objective: count the number of variants in each bin.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sparce.parseVariantAnnotationFile.count_variants_in_bins_per_chromosome_per_strand">
+<span class="sig-name descname"><span class="pre">count_variants_in_bins_per_chromosome_per_strand</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sparce.parseVariantAnnotationFile.count_variants_in_bins_per_chromosome_per_strand" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>df</strong> (<em>pandas dataframe</em>) – variant annotation file</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>variant annotation file</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>pandas dataframe</p>
+</dd>
+</dl>
+<p>format: chr start end name score strand</p>
+<p>Objective: count the number of variants in each bin.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sparce.parseVariantAnnotationFile.count_variants_in_bins_per_chromosome_per_strand_per_score">
+<span class="sig-name descname"><span class="pre">count_variants_in_bins_per_chromosome_per_strand_per_score</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sparce.parseVariantAnnotationFile.count_variants_in_bins_per_chromosome_per_strand_per_score" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>df</strong> (<em>pandas dataframe</em>) – variant annotation file</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>variant annotation file</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>pandas dataframe</p>
+</dd>
+</dl>
+<p>format: chr start end name score strand</p>
+<p>Objective: count the number of variants in each bin.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sparce.parseVariantAnnotationFile.count_variants_in_bins_per_chromosome_per_strand_per_score_per_name">
+<span class="sig-name descname"><span class="pre">count_variants_in_bins_per_chromosome_per_strand_per_score_per_name</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sparce.parseVariantAnnotationFile.count_variants_in_bins_per_chromosome_per_strand_per_score_per_name" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>df</strong> (<em>pandas dataframe</em>) – variant annotation file</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>variant annotation file</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>pandas dataframe</p>
+</dd>
+</dl>
+<p>format: chr start end name score strand</p>
+<p>Objective: count the number of variants in each bin.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sparce.parseVariantAnnotationFile.count_variants_in_bins_per_chromosome_per_strand_per_score_per_name_per_start">
+<span class="sig-name descname"><span class="pre">count_variants_in_bins_per_chromosome_per_strand_per_score_per_name_per_start</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sparce.parseVariantAnnotationFile.count_variants_in_bins_per_chromosome_per_strand_per_score_per_name_per_start" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>df</strong> (<em>pandas dataframe</em>) – variant annotation file</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>variant annotation file</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>pandas dataframe</p>
+</dd>
+</dl>
+<p>format: chr start end name score strand</p>
+<p>Objective: count the number of variants in each bin.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sparce.parseVariantAnnotationFile.count_variants_in_bins_per_chromosome_per_strand_per_score_per_name_per_start_per_end">
+<span class="sig-name descname"><span class="pre">count_variants_in_bins_per_chromosome_per_strand_per_score_per_name_per_start_per_end</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sparce.parseVariantAnnotationFile.count_variants_in_bins_per_chromosome_per_strand_per_score_per_name_per_start_per_end" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>df</strong> (<em>pandas dataframe</em>) – variant annotation file</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>variant annotation file</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>pandas dataframe</p>
+</dd>
+</dl>
+<p>format: chr start end name score strand</p>
+<p>Objective: count the number of variants in each bin.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sparce.parseVariantAnnotationFile.parse_bedfile">
+<span class="sig-name descname"><span class="pre">parse_bedfile</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sparce.parseVariantAnnotationFile.parse_bedfile" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>variantAnnotationFile</strong> (<em>string</em>) – variant annotation file</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>variant annotation file</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>pandas dataframe</p>
+</dd>
+</dl>
+<p>format: chr start end name score strand</p>
+<p>Objective: parse a bed file that contains variants from an organism of interest into apandas dataframe. Bin variants into a sliding window of size 100kb.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sparce.parseVariantAnnotationFile.parse_vcf">
+<span class="sig-name descname"><span class="pre">parse_vcf</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sparce.parseVariantAnnotationFile.parse_vcf" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>variantAnnotationFile</strong> (<em>string</em>) – variant annotation file</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>variant annotation file</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>pandas dataframe</p>
+</dd>
+</dl>
+<p>format: chr start end name score strand</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sparce.parseVariantAnnotationFile.plot_variant_density_in_bins_per_chromosome">
+<span class="sig-name descname"><span class="pre">plot_variant_density_in_bins_per_chromosome</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sparce.parseVariantAnnotationFile.plot_variant_density_in_bins_per_chromosome" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>df</strong> (<em>pandas dataframe</em>) – variant annotation file</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>variant annotation file</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>pandas dataframe</p>
+</dd>
+<dt class="field-even">Plot</dt>
+<dd class="field-even"><p>variant density in bins per chromosome</p>
+</dd>
+</dl>
+<p>Objective: Sum the variants in the each sliding window and vsiaulize the density of the variants in each of the bins.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="sparce.parse_gene_annotation">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sparce.</span></span><span class="sig-name descname"><span class="pre">parse_gene_annotation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">geneAnnotationFile</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sparce.parse_gene_annotation" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="sparce.parse_gene_annotation.bin_genome">
+<span class="sig-name descname"><span class="pre">bin_genome</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">binSize</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sparce.parse_gene_annotation.bin_genome" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>df</strong> (<em>pandas dataframe</em>) – gene annotation file</p></li>
+<li><p><strong>binSize</strong> (<em>int</em>) – bin size</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>gene annotation file</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>pandas dataframe</p>
+</dd>
+</dl>
+<p>format: chr start end name score strand</p>
+<p>Objective: bin features of the genome into bins accoring to sliding window equal to the binSize</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sparce.parse_gene_annotation.parse_gfffile">
+<span class="sig-name descname"><span class="pre">parse_gfffile</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sparce.parse_gene_annotation.parse_gfffile" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>geneAnnotationFile</strong> (<em>string</em>) – gene annotation file</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>gene annotation file</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>pandas dataframe</p>
+</dd>
+</dl>
+<p>format: chr start end name score strand
+Objective: parse organism gff file into pandas dataframe</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="sparce.prepare_transcriptomics_file_for_SPARCE">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sparce.</span></span><span class="sig-name descname"><span class="pre">prepare_transcriptomics_file_for_SPARCE</span></span><a class="headerlink" href="#sparce.prepare_transcriptomics_file_for_SPARCE" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Michael Skaro.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
