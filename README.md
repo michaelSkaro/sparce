@@ -46,7 +46,7 @@ X, y = preprocess(file)
 nFeatures = 5
 nJobs = 10
 
-CV = fs.grade_features(X = X, y = y, nFeatures = nFeatures , nJobs = nJobs)
+CV = fs.feature_selection.grade_features(X = X, y = y, nFeatures = nFeatures , nJobs = nJobs)
 
 
 ```
