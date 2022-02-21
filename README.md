@@ -8,14 +8,26 @@ The sparce software is a machine learning based software for automated feature s
 
 We utilized the python programming language to build ths package. We have uploaded this package onto the public python development forum pypi. To install this package:
 
+
 ```
-pip install -i sparce
+conda create -n sparce pip
+
+conda activate sparce
+```
+
+```
+pip install sparce
 ```
 
 ### Usage
 
 ```python
-import sparce as fs
+'''
+Run inside script
+'''
+
+
+from sparce import sparce as fs
 import pandas as pd
 from sklearn.preprocessing import OrdinalEncoder
 
@@ -32,18 +44,31 @@ def preprocess(file):
 X, y = preprocess(file)
 
 nFeatures = 5
-nFeatures = 10
+nJobs = 10
 
 CV = fs.grade_features(X = X, y = y, nFeatures = nFeatures , nJobs = nJobs)
 
 
 ```
 
+### CLI
+1.  Clone the repository and re-invoke the main function. 
+2.  import args_parse into the sparce.py 
+3.  Ready to run in the cli
+
+```
+python sparce.py -x <file> -y <target> -nFeatures <int> -nJobs <int>
+```
+
+```
+conda deactivate sparce
+```
+
 ### sparce assumptions
 - The data is in tidy format where (Features x samples) with a column labeled "target"
 - The features are continuous attributes in a classificaiton problem
-- The classes are mutuallyexclusive
-- There are more samples than features
+- The classes are mutually exclusive
+- nFeatures > nSamples,  you are attempting to reduce the dimensionality of the problem to produce nSamples > nFeatures
 
 
 ### sparce documentaitons:

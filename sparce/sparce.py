@@ -17,7 +17,7 @@ from sklearn.ensemble import RandomForestClassifier, RandomForestRegressor
 from sklearn.feature_selection import RFE, SelectFromModel, SelectKBest, chi2
 from sklearn.linear_model import LogisticRegression
 
-#from sparce import fs.args_parse
+#from sparce import ars_parse
 
 class feature_selection:
 
