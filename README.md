@@ -27,7 +27,7 @@ Run inside script
 '''
 
 
-from sparce import sparce as fs
+from sparce.sparce import sparce as fs
 import pandas as pd
 from sklearn.preprocessing import OrdinalEncoder
 
