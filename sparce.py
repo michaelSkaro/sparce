@@ -264,6 +264,8 @@ class feature_selection:
 
        return CV
 
+#--------------------------------#
+
 class parseVariantAnnotationFile:
     def __inti__(self, variatnAnnotationFile):
         self.variatnAnnotationFile = variatnAnnotationFile
@@ -969,25 +971,6 @@ class bin_manipulations:
 
         return gff_df, binSize
 
-
-
-
-
-            
-
-        
-        
-
-
-
-
-
-
-        
-
-
-
-        
 
 '''
 def main(cla_args=sys.argv[1:]):
