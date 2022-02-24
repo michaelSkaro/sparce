@@ -27,7 +27,7 @@ Run inside script
 '''
 
 
-from sparce.sparce import sparce as fs
+from sparce.feature_selection import feature_selection as fs
 import pandas as pd
 from sklearn.preprocessing import OrdinalEncoder
 

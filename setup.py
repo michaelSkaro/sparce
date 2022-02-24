@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="sparce",
-    version="0.0.9",
+    version="0.1.0",
     author="Michael Skaro",
     author_email="mskaro.ms@gmail.com",
     description="A python package for automated feature selection",
