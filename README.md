@@ -77,7 +77,7 @@ RTD build *coming soon*
 
 
 ### Descritption of variables
-  - X = The descriptive variables measuring features of the target variable y. X should be in long format as standard. Where variables are columns and instances are rows. 
+  - X = The descriptive variables measuring features of the target variable y. X should be in wide format as standard. Where variables are columns and instances are rows. 
   - y = The target variable. This variable is expected to be a numpy array of length = len(X['A_column']). The y variable should be encoded using the sklearn OHE encoding or ordinally encoded. 
   - nFeatures = Top n features toreturn for the selection algorithms. The objetive of this parameter is to limit the recursive feature selection from running indefinitely. 
   - nJobs = compute resources to dedicate to the job at hand. RFE is slow, be prepared to get a cup of coffee. This can be shut off if the user wishes. 
