@@ -27,7 +27,7 @@ Run inside script
 '''
 
 
-import sparce.sparce.feature_selection as fs
+import sparce
 import pandas as pd
 from sklearn.preprocessing import OrdinalEncoder
 
@@ -46,7 +46,7 @@ X, y = preprocess(file)
 nFeatures = 5
 nJobs = 10
 
-CV = fs.feature_selection.grade_features(X = X, y = y, nFeatures = nFeatures , nJobs = nJobs)
+CV = sparce.sparce.feature_selection.grade_features(X = X, y = y, nFeatures = nFeatures , n_jobs = nJobs)
 
 
 ```
