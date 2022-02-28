@@ -16,6 +16,7 @@ import sklearn
 from sklearn.ensemble import RandomForestClassifier, RandomForestRegressor
 from sklearn.feature_selection import RFE, SelectFromModel, SelectKBest, chi2
 from sklearn.linear_model import LogisticRegression
+import torch
 
 #from sparce import ars_parse
 

@@ -22,5 +22,5 @@ setuptools.setup(
     ],
     packages=setuptools.find_packages(exclude=("images*", "docs*", "results*")),
     python_requires=">=3.6",
-    install_requires=['seaborn','matplotlib','numpy','pandas','scikit-learn']
+    install_requires=['seaborn','matplotlib','numpy','pandas','scikit-learn', 'torch']
 )
