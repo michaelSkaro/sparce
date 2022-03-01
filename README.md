@@ -1,5 +1,8 @@
 <h1 align="center">Statistical Preprocessing of Attributes via Cross-validated Recursive Elimination</h1>
 
+![PyPI](https://img.shields.io/pypi/v/sparce?style=plastic) ![GitHub issues](https://img.shields.io/github/issues/michaelSkaro/sparce?style=plastic) ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/sparce?style=plastic) ![GitHub repo size](https://img.shields.io/github/repo-size/michaelSkaro/sparce?style=plastic)
+
+
 *sparce*
 
 The sparce software is a machine learning based software for automated feature seleciton in genomics data files. The software was originially outfitted to select features in transcriptomic profiling data but has now been outfitted for general use in genetics, transcriptomics, methylomics and ATAC-seq data.
