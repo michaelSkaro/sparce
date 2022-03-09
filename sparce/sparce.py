@@ -18,7 +18,7 @@ from sklearn.feature_selection import RFE, SelectFromModel, SelectKBest, chi2
 from sklearn.linear_model import LogisticRegression
 import torch
 
-#from sparce import ars_parse
+#from sparce import agrs_parse
 
 class feature_selection:
 
