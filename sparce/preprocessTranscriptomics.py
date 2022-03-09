@@ -29,7 +29,6 @@ class prepare_transcriptomics_file_for_SPARCE:
         :return: transcriptomics file
         :rtype: pandas dataframe
         
-
         Objective: parse the transcriptomics file into pandas dataframe
         '''
         
@@ -61,10 +60,7 @@ class prepare_transcriptomics_file_for_SPARCE:
         :type df: pandas dataframe
         :return: transcriptomics file
         :rtype: pandas dataframe
-
-
         Objective: split the transcriptomics file into two dataframes, one for the transcript expression and one for the target classes
-
         
         '''
         X = df.drop("target", axis=1)
@@ -82,7 +78,6 @@ class prepare_transcriptomics_file_for_SPARCE:
         :type y: pandas dataframe
         :return: balanced transcriptomics file
         :rtype: pandas dataframe
-
         Objective: balance the data in the classes using the sklearn oversample and SMOTE methods
         
         '''
@@ -105,9 +100,7 @@ class prepare_transcriptomics_file_for_SPARCE:
         :type num: int
         :return: tuples of sequence bins
         :rtype: list of tuples
-
         Objective: chunk the data into bins of size num
-
         """
         avg = len(seq) / float(num)
         out = []
@@ -129,14 +122,9 @@ class prepare_transcriptomics_file_for_SPARCE:
         :type binSize: int
         :return: binned transcriptomics file
         :rtype: pandas dataframe
-
-
-
         input: df, gff_df, binSize
         output: df_binned
-
         Objective: bin transcript features based on gene annotation
-
         '''
         df["bin"] = df["start"].apply(lambda x: math.floor(x/binSize))
         df["bin"] = df["bin"].astype(int)

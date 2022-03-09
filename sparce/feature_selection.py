@@ -43,7 +43,6 @@ class feature_selection:
        
        Objective: Use the chi-squared test to select features.
        Reference: https://scikit-learn.org/stable/modules/generated/sklearn.feature_selection.chi2.html
-
        '''
        
        feature_list = X.columns
@@ -65,18 +64,14 @@ class feature_selection:
        :type nFeatures: int
        :param nJobs: number of jobs to run in parallel
        :type nJobs: int
-
        
        :return: support
        :rtype: list boolean
        :return: feature_list 
        :rtype: list string
        
-
        Objective: Use the RandomForestRegressor to select features.
        Reference: https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestRegressor.html
-
-
        '''
 
 
@@ -104,10 +99,8 @@ class feature_selection:
        :rtype: list boolean
        :return: feature_list 
        :rtype: list string
-
        Objective: Use the Recursive Feature Elimination to select features.
        Reference: https://scikit-learn.org/stable/modules/generated/sklearn.feature_selection.RFE.html
-
        '''
 
 
@@ -140,7 +133,6 @@ class feature_selection:
        :rtype: list boolean
        :return: feature_list 
        :rtype: list string
-
        Objective: Use the Lasso Regression to select features.
        Reference: https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.Lasso.html
        
@@ -173,7 +165,6 @@ class feature_selection:
        :rtype: list boolean
        :return: feature_list 
        :rtype: list string
-
        Objective: Use the RandomForestClassifier to select features.
        Reference: https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html
        
@@ -208,7 +199,6 @@ class feature_selection:
         
         :return: dataframe quantifying the performance of each feature selection method
         :rtype: dataframe
-
         Objective: Use the cross validation to select features.
         Reference: https://towardsdatascience.com/feature-selection-techniques-in-machine-learning-with-python-f24e7da3f36e
         
@@ -232,19 +222,17 @@ class feature_selection:
    def grade_features(X, y, nFeatures, n_jobs):
        '''
        :param X: continuous data
-         :type X: pandas dataframe
+       :type X: pandas dataframe
        :param y: class data
-         :type y: encoded class data
+       :type y: encoded class data
        :param nFeatures: number of features to select
        :type nFeatures: int
        :param nJobs: number of jobs to run in parallel
        :type nJobs: int
-
        Objective: Call each function in the feature selection class, grade each set of features with each of the algorithms.
        Sum the total boolen supports for each feature and then sort the features by the sum.
        
        Reference: https://towardsdatascience.com/feature-selection-techniques-in-machine-learning-with-python-f24e7da3f36e
-
        '''
        chiSQ_support, feature_list = feature_selection.chiSQ_selector(X, y, nFeatures=nFeatures)
        rfe_support = feature_selection.recursiveFeatureSelection(X, y, nFeatures=nFeatures, nJobs = nJobs)

@@ -30,11 +30,8 @@ class parseVariantAnnotationFile:
         :type variantAnnotationFile: string
         :return: variant annotation file
         :rtype: pandas dataframe
-
         format: chr start end name score strand
-
         Objective: parse a bed file that contains variants from an organism of interest into apandas dataframe. Bin variants into a sliding window of size 100kb.
-
         '''
         # read in the bed file
         df = pd.read_csv(variantAnnotationFile, sep="\t", header=None, comment="#")
@@ -58,11 +55,8 @@ class parseVariantAnnotationFile:
         :type df: pandas dataframe
         :return: variant annotation file
         :rtype: pandas dataframe
-
         format: chr start end name score strand
-
         Objective: count the number of variants in each bin.
-
         '''
         # count the number of variants in each bin
         df["bin_count"] = df.groupby(["bin"])["bin"].transform("count")
@@ -76,11 +70,8 @@ class parseVariantAnnotationFile:
         :type df: pandas dataframe
         :return: variant annotation file
         :rtype: pandas dataframe
-
         format: chr start end name score strand
-
         Objective: count the number of variants in each bin.
-
         '''
         # count the number of variants in each bin
         
@@ -100,11 +91,8 @@ class parseVariantAnnotationFile:
         :type df: pandas dataframe
         :return: variant annotation file
         :rtype: pandas dataframe
-
         format: chr start end name score strand
-
         Objective: count the number of variants in each bin.
-
         '''
         # count the number of variants in each bin
         df["bin_count"] = df.groupby(["bin"])["bin"].transform("count")
@@ -124,9 +112,7 @@ class parseVariantAnnotationFile:
         :rtype: pandas dataframe
         
         format: chr start end name score strand
-
         Objective: count the number of variants in each bin.
-
         '''
         # count the number of variants in each bin
         df["bin_count"] = df.groupby(["bin"])["bin"].transform("count")
@@ -146,11 +132,8 @@ class parseVariantAnnotationFile:
         :type df: pandas dataframe
         :return: variant annotation file
         :rtype: pandas dataframe
-
         format: chr start end name score strand
-
         Objective: count the number of variants in each bin.
-
         '''
         # count the number of variants in each bin
         df["bin_count"] = df.groupby(["bin"])["bin"].transform("count")
@@ -175,9 +158,7 @@ class parseVariantAnnotationFile:
         :rtype: pandas dataframe
         
         format: chr start end name score strand
-
         Objective: count the number of variants in each bin.
-
         '''
         # count the number of variants in each bin
         df["bin_count"] = df.groupby(["bin"])["bin"].transform("count")
@@ -200,11 +181,8 @@ class parseVariantAnnotationFile:
         :type df: pandas dataframe
         :return: variant annotation file
         :rtype: pandas dataframe
-
         format: chr start end name score strand
-
         Objective: count the number of variants in each bin.
-
         '''
         # count the number of variants in each bin
         df["bin_count"] = df.groupby(["bin"])["bin"].transform("count")
@@ -230,10 +208,7 @@ class parseVariantAnnotationFile:
         :return: variant annotation file
         :rtype: pandas dataframe
         :plot: variant density in bins per chromosome
-
-
         Objective: Sum the variants in the each sliding window and vsiaulize the density of the variants in each of the bins.
-
         '''
         # count the number of variants in each bin
         df["bin_count"] = df.groupby(["bin"])["bin"].transform("count")
@@ -264,9 +239,7 @@ class parseVariantAnnotationFile:
     
         input: genomeAnnotationFile and annotatedBedFile
         Output: dataframe
-
         Objective: for each variant in the annotatedBedFile find any gene within 100kb of the variant using the genomeAnnotaitonFile
-
         '''
         # read the genome annotation file
         genomeAnnotation = pd.read_csv(genomeAnnotationFile, sep="\t",  header=None, comment="#")
@@ -309,9 +282,7 @@ class parseVariantAnnotationFile:
         :type variantAnnotationFile: string
         :return: variant annotation file
         :rtype: pandas dataframe
-
         format: chr start end name score strand
-
         '''
         df = pd.read_csv(variantAnnotationFile, sep="\t", header=None, comment="#")
         df.columns = ["chr", "start", "end", "name", "score", "strand"]

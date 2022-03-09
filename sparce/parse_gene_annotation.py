@@ -29,8 +29,6 @@ class parse_gene_annotation:
         :type geneAnnotationFile: string
         :return: gene annotation file
         :rtype: pandas dataframe
-
-
         format: chr start end name score strand
         Objective: parse organism gff file into pandas dataframe
         '''
@@ -61,11 +59,8 @@ class parse_gene_annotation:
         :return: gene annotation file
         :rtype: pandas dataframe
         
-
         format: chr start end name score strand
-
         Objective: bin features of the genome into bins accoring to sliding window equal to the binSize
-
         '''
         df["bin"] = df["start"].apply(lambda x: math.floor(x/binSize))
         df["bin"] = df["bin"].astype(int)

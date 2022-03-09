@@ -33,12 +33,9 @@ class bin_manipulations:
         :type binSize: int
         :return: binned gene annotation file
         :rtype: pandas dataframe
-
-
         Objective: Using a slideing winodw iterate over the gene annotation file and bin the genes based on the bin size. 
         If the number of featues in the bin is greater than the number of samples, then the bin is broken into mini bins of size binSize/10. 
         
-
         '''
 
 
@@ -84,8 +81,6 @@ class bin_manipulations:
         :type binSize: int
         :return: expanded gene annotation file
         :rtype: pandas dataframe
-
-
         Objective: if a bin has significantly less features than the average number of features in a bin, expand the binSize for that bin
         until it captures approxiamtely equal features to the average number of values in a bin. Adjust the start and end of the next bin accordingly.
         '''
@@ -127,8 +122,6 @@ class bin_manipulations:
         :type binSize: int
         :return: merged gene annotation file
         :rtype: pandas dataframe
-
-
         Objective: while iterating over the bins look ahead to the next bin, if the next bin is the last bin on the chromosome merge the last bin with the current bin
         '''
             
@@ -167,8 +160,6 @@ class bin_manipulations:
         :type nSamples: int
         :return: adjusted gene annotation file
         :rtype: pandas dataframe
-
-
         Objective: while iterating over the bins calculate the average number of features left in the remaining bins, 
         adjust the binSize to capture approximately equal numbers of features in each bin
         '''
@@ -222,13 +213,7 @@ class bin_manipulations:
         :rtype: pandas dataframe
         :return: filtered gene annotation file
         :rtype: pandas dataframe
-
-
-
         Objective: iterate over the gff_df and the vcf_file to assign a bin to each feature in the gff_df and vcf_file. Remove features in the vcf_file that do not land in the genes in the gff_df.
-
-
-
         '''
             
         gff_df["bin"] = gff_df["start"].apply(lambda x: math.floor(x/binSize))
@@ -317,9 +302,7 @@ class bin_manipulations:
         :type nFeatures: int
         :param binSize: bin size
         :type binSize: int
-
         
-
         Objective: Use the filtered vcf file to weight the variants in the vcf file according to the size of the difference between the start and end position of the variant. 
         Re-assign variants into bins with approximately equal nFeatures in each bin and approxmiately equal variant weight. Use the nFeatures to determine the bin size.
         '''
@@ -382,7 +365,6 @@ class bin_manipulations:
         :type gff_df: pd.DataFrame
         :return: matched features
         :rtype: pd.DataFrame
-
         Objective: Use the weighted vcf file to match the variants in the vcf file to the features in the gff_df. Return a merged pandas dataframe with 
         the matched features and the corresponding variants.
         '''
@@ -431,7 +413,6 @@ class bin_manipulations:
         :rtype: torch.Tensor
         :return: transposed vcf file
         :rtype: pd.DataFrame
-
         Objective: Transpose the vcf file into a tensor. With the columns of the vcf file being the variants and rows being the genontypes
         and the values being the calls of the variant in the genontype.
         '''
@@ -487,7 +468,6 @@ class bin_manipulations:
         :type bin_col: int
         :return: dataframe
         :rtype: pd.DataFrame
-
         Objective: Extract the dataframe from the tensor based on the bin column.
         '''
 
@@ -507,7 +487,6 @@ class bin_manipulations:
         :type variant_col: int
         :return: dataframe
         :rtype: pd.DataFrame
-
         Objective: Extract the dataframe from the tensor based on the variant column.
         '''
 
@@ -526,7 +505,6 @@ class bin_manipulations:
         :type genotype_col: int
         :return: dataframe
         :rtype: pd.DataFrame
-
         Objective: Extract the dataframe from the tensor based on the genotype column.
         '''
 
@@ -534,4 +512,3 @@ class bin_manipulations:
         dataframe = tensor[:, :, vcf_df.iloc[:, genotype_col].values - 1]
 
         return dataframe
-
