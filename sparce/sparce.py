@@ -1085,6 +1085,7 @@ class bin_manipulations:
 
         Objective: Use the filtered vcf file to weight the variants in the vcf file according to the size of the difference between the start and end position of the variant. 
         Re-assign variants into bins with approximately equal nFeatures in each bin and approxmiately equal variant weight. Use the nFeatures to determine the bin size.
+        This function used an adaptation of the 0-1 knapsack problem to solve the problem.
         '''
 
         # read the vcf file
@@ -1300,30 +1301,6 @@ class bin_manipulations:
     
     
 
-
-
-
-        
-    
-        
-            
-
-
-            
-         
-
-            
-
-
-
-
-
-
-            
-            
-   
-        
-            
 
 
 
