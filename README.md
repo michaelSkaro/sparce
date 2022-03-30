@@ -1,4 +1,4 @@
-<h1 align="center">Statistical Preprocessing of Attributes via Cross-validated Recursive Elimination</h1>
+<h1 align="center">Statistical Preprocessing of Attributes via Recursive Cross Elimination</h1>
 
 ![PyPI](https://img.shields.io/pypi/v/sparce?style=plastic) ![GitHub issues](https://img.shields.io/github/issues/michaelSkaro/sparce?style=plastic) ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/sparce?style=plastic) ![GitHub repo size](https://img.shields.io/github/repo-size/michaelSkaro/sparce?style=plastic)
 
