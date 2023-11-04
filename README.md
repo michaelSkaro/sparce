@@ -4,7 +4,7 @@
 
 The sparce software is a statistical machine learning software that automates
 feature seleciton in genomics data files. The software was originally outiftted
-for egenral use in genetics, transcirptomics, methylomics and ATAC-seq data.
+for general use in genetics, transcirptomics, methylomics and ATAC-seq data.
 
 Installation
 
