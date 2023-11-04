@@ -1,4 +1,4 @@
-[![PyPI version](https://badge.fury.io/py/sparce.svg)](https://badge.fury.io/py/sparce) [![PyPI version](https://badge.fury.io/py/sparce.svg)](https://badge.fury.io/py/sparce)
+[![PyPI version](https://badge.fury.io/py/sparce.svg)](https://badge.fury.io/py/sparce)
 
 
 
