@@ -65,7 +65,7 @@ python sparce.py -x <file> -y <target> -nFeatures <int> -nJobs <int>
 
 conda deactivate sparce
 
-``
+```
 
 sparce assumptions
 
