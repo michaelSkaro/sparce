@@ -1,6 +1,7 @@
-### Statistical Processing of attributes via Recursive Cross Elimination
+<h3 style="text-align: center;">Statistical Processing of attributes via Recursive Cross Elimination</h3>
 
-### SPARCE
+
+*SPARCE*
 
 The sparce software is a statistical machine learning software that automates
 feature seleciton in genomics data files. The software was originally outiftted
@@ -18,7 +19,7 @@ pip install sparce
 ```
 
 
-#### HOW TO RUN
+***HOW TO RUN***
 
 ```{python}
 from sparce import sparce.sparce 
