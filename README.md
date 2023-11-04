@@ -1,6 +1,10 @@
-<p style="text-align: center;">Text_content</p>
+<div style="margin-left: auto;
+            margin-right: auto;
+            width: 30%">
 
-<h3 style="text-align: center;">Statistical Processing of attributes via Recursive Cross Elimination</h3>
+Statistical Processing of attributes via Recursive Cross Elimination
+
+</div>
 
 
 *SPARCE*
