@@ -1,3 +1,5 @@
+<p style="text-align: center;">Text_content</p>
+
 <h3 style="text-align: center;">Statistical Processing of attributes via Recursive Cross Elimination</h3>
 
 
