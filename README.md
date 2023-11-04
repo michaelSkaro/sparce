@@ -1,7 +1,8 @@
+https://badge.fury.io/py/sparce.svg [![PyPI version](https://badge.fury.io/py/sparce.svg)](https://badge.fury.io/py/sparce)
+
+
+
 #### Statistical Processing of attributes via Recursive Cross Elimination
-
-
-
 
 *SPARCE*
 
